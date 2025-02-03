@@ -184,9 +184,9 @@ export default function Home() {
               <div className="flex items-center justify-center gap-2">
                 <TypeAnimation
                   sequence={[
-                    'Jensen Kershey Aragon',
+                    "Hi, I'm Jensen Kershey Aragon",
                     1000,
-                    'Full Stack Developer',
+                    "I'm a Full Stack Developer",
                     1000,
                   ]}
                   wrapper="span"
@@ -331,23 +331,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
+              className="grid grid-cols-2 md:grid-cols-2 gap-8 mt-16"
             >
               <div className="text-center">
                 <h3 className="text-3xl font-bold text-blue-500">6+</h3>
                 <p className="text-gray-400">Months Experience</p>
               </div>
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-blue-500">10+</h3>
-                <p className="text-gray-400">Projects Completed</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-blue-500">5+</h3>
-                <p className="text-gray-400">Happy Clients</p>
-              </div>
-              <div className="text-center">
                 <h3 className="text-3xl font-bold text-blue-500">3+</h3>
-                <p className="text-gray-400">Academic Awards</p>
+                <p className="text-gray-400">Projects Completed</p>
               </div>
             </motion.div>
           </div>
