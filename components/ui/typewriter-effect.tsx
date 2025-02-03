@@ -38,22 +38,22 @@ export const TypewriterEffect = ({
           // Then show one by one
           for (const element of elements) {
             element.style.display = 'inline-block';
-            await animate(element, { opacity: 1 }, { duration: 0.15 });
-            // Add a small delay between each character
-            await new Promise((resolve) => setTimeout(resolve, 50));
+            await animate(element, { opacity: 1 }, { duration: 0.3 });
+            // Add a longer delay between each character
+            await new Promise((resolve) => setTimeout(resolve, 150));
           }
 
-          // Keep visible for 2 seconds
-          await new Promise((resolve) => setTimeout(resolve, 3000));
+          // Keep visible for longer
+          await new Promise((resolve) => setTimeout(resolve, 4000));
 
           // Hide from end to start
           for (let i = elements.length - 1; i >= 0; i--) {
-            await animate(elements[i], { opacity: 0 }, { duration: 0.15 });
-            await new Promise((resolve) => setTimeout(resolve, 30));
+            await animate(elements[i], { opacity: 0 }, { duration: 0.2 });
+            await new Promise((resolve) => setTimeout(resolve, 50));
           }
 
-          // Pause before next iteration
-          await new Promise((resolve) => setTimeout(resolve, 1000));
+          // Longer pause before next iteration
+          await new Promise((resolve) => setTimeout(resolve, 1500));
         }
       };
 
