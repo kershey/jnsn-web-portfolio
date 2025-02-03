@@ -203,7 +203,7 @@ export default function Home() {
                   Full Stack Developer & UI/UX Designer
                 </h3>
                 <p className="text-gray-400">
-                  Hello! I'm Jensen, a passionate Full Stack Developer and
+                  Hello! I&apos;m Jensen, a passionate Full Stack Developer and
                   aspiring technologist based in the Philippines. As a 4th year
                   IT student, I combine my academic knowledge with practical
                   development experience to create web solutions that are both
@@ -213,8 +213,8 @@ export default function Home() {
                   My journey in web development began during my university
                   studies, where my curiosity about web technologies led me to
                   dive deep into modern frameworks and development practices.
-                  I've dedicated countless hours to self-study, exploring the
-                  latest web technologies, frameworks, and industry best
+                  I&apos;ve dedicated countless hours to self-study, exploring
+                  the latest web technologies, frameworks, and industry best
                   practices through online courses, documentation, and hands-on
                   projects. This self-driven learning approach, combined with my
                   academic foundation, has enabled me to stay current with
@@ -751,8 +751,8 @@ export default function Home() {
               <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
               <p className="text-gray-400 max-w-2xl mx-auto">
                 Feel free to reach out to me for collaborations or just a
-                friendly chat. I'm always open to discussing new projects and
-                opportunities.
+                friendly chat. I&apos;m always open to discussing new projects
+                and opportunities.
               </p>
             </motion.div>
 
