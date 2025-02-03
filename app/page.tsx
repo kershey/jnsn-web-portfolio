@@ -107,18 +107,7 @@ export default function Home() {
               className="mb-12"
             >
               <div className="flex items-center justify-center gap-2">
-                <TypewriterEffect
-                  words={[
-                    { text: 'Hi!' },
-                    { text: "I'm" },
-                    { text: 'Jensen', className: 'text-blue-500' },
-                    { text: 'Kershey' },
-                    { text: 'Aragon' },
-                    { text: <WavingHand /> },
-                  ]}
-                  className="text-5xl mb-2"
-                  cursorClassName="bg-blue-500"
-                />
+                Jensen Kershey Aragon
               </div>
             </motion.div>
 
