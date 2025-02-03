@@ -1,10 +1,18 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { Download, Code2, Database, GitBranch, Palette } from 'lucide-react';
+import {
+  Download,
+  Code2,
+  Database,
+  GitBranch,
+  Palette,
+  Menu,
+  X,
+} from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
 import {
   FaReact,
@@ -24,8 +32,33 @@ import {
 } from 'react-icons/tb';
 import { SiExpress, SiFigma, SiAdobexd } from 'react-icons/si';
 import { MdOutlineDesignServices, MdDevices } from 'react-icons/md';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    // Prevent scrolling when menu is open
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const menuItems = [
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About me' },
+    { href: '#services', label: 'Skills' },
+    { href: '#work', label: 'My Work' },
+  ];
+
   return (
     <div className="relative min-h-screen w-full bg-black">
       {/* Background with grid and dots */}
@@ -40,62 +73,92 @@ export default function Home() {
         {/* Navigation */}
         <nav className="fixed w-full top-0 z-50 px-4 py-4">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-white/[0.05] backdrop-blur-md rounded-full px-8 py-4 flex justify-between items-center border border-white/[0.05]">
+            <div className="bg-white/[0.05] backdrop-blur-md rounded-full px-4 md:px-8 py-4 flex justify-between items-center border border-white/[0.05]">
               <Link href="/" className="text-2xl font-bold">
                 Jensen<span className="text-red-500">.</span>
               </Link>
 
-              <NavigationMenu.Root className="relative">
-                <NavigationMenu.List className="flex space-x-8">
-                  <NavigationMenu.Item>
-                    <NavigationMenu.Link
-                      className="hover:text-gray-300 transition-colors"
-                      href="#home"
-                    >
-                      Home
-                    </NavigationMenu.Link>
-                  </NavigationMenu.Item>
-                  <NavigationMenu.Item>
-                    <NavigationMenu.Link
-                      className="hover:text-gray-300 transition-colors"
-                      href="#about"
-                    >
-                      About me
-                    </NavigationMenu.Link>
-                  </NavigationMenu.Item>
-                  <NavigationMenu.Item>
-                    <NavigationMenu.Link
-                      className="hover:text-gray-300 transition-colors"
-                      href="#services"
-                    >
-                      Skills
-                    </NavigationMenu.Link>
-                  </NavigationMenu.Item>
-                  <NavigationMenu.Item>
-                    <NavigationMenu.Link
-                      className="hover:text-gray-300 transition-colors"
-                      href="#work"
-                    >
-                      My Work
-                    </NavigationMenu.Link>
-                  </NavigationMenu.Item>
-                </NavigationMenu.List>
-              </NavigationMenu.Root>
+              {/* Desktop Navigation */}
+              <div className="hidden md:block">
+                <NavigationMenu.Root className="relative">
+                  <NavigationMenu.List className="flex space-x-8">
+                    {menuItems.map((item) => (
+                      <NavigationMenu.Item key={item.href}>
+                        <NavigationMenu.Link
+                          className="hover:text-gray-300 transition-colors"
+                          href={item.href}
+                        >
+                          {item.label}
+                        </NavigationMenu.Link>
+                      </NavigationMenu.Item>
+                    ))}
+                  </NavigationMenu.List>
+                </NavigationMenu.Root>
+              </div>
 
-              <Link
-                href="#contact"
-                className="px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              >
-                Contact →
-              </Link>
+              <div className="flex items-center gap-4">
+                <Link
+                  href="#contact"
+                  className="hidden md:block px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                >
+                  Contact →
+                </Link>
+
+                {/* Hamburger Menu Button */}
+                <button
+                  onClick={toggleMenu}
+                  className="md:hidden p-2 hover:bg-white/10 rounded-full transition-colors"
+                  aria-label="Toggle Menu"
+                >
+                  {isOpen ? (
+                    <X className="w-6 h-6" />
+                  ) : (
+                    <Menu className="w-6 h-6" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </nav>
 
+        {/* Mobile Navigation Overlay */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 md:hidden"
+            >
+              <div className="absolute inset-0 bg-black/95 backdrop-blur-md" />
+              <nav className="relative h-full flex flex-col items-center justify-center space-y-8 text-2xl">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="hover:text-blue-500 transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Link
+                  href="#contact"
+                  onClick={closeMenu}
+                  className="px-8 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-base"
+                >
+                  Contact →
+                </Link>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* Hero Section */}
         <main
           id="home"
-          className="pt-48 px-4 relative min-h-[calc(100vh-80px)]"
+          className="pt-32 md:pt-48 px-4 relative min-h-[calc(100vh-80px)]"
         >
           {/* Hero Background */}
           <div className="absolute inset-0">
@@ -116,7 +179,7 @@ export default function Home() {
                 type: 'spring',
                 stiffness: 100,
               }}
-              className="mb-12"
+              className="mb-8 md:mb-12"
             >
               <div className="flex items-center justify-center gap-2">
                 <TypeAnimation
@@ -129,9 +192,9 @@ export default function Home() {
                   wrapper="span"
                   speed={50}
                   repeat={Infinity}
-                  className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500"
+                  className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500"
                 />
-                <div className="animate-waving-hand text-5xl md:text-6xl">
+                <div className="animate-waving-hand text-4xl md:text-5xl lg:text-6xl">
                   👋
                 </div>
               </div>
@@ -142,12 +205,12 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-7xl md:text-8xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400 tracking-tight">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400 tracking-tight">
                 full-stack web
                 <br />
                 developer<span className="text-blue-500">.</span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
                 I am a passionate frontend developer and 4th year Information
                 Technology student from Roxas City, Philippines. Currently
                 exploring the world of web development while pursuing my degree,
@@ -160,15 +223,15 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex gap-6 justify-center"
+              className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center px-4"
             >
               <Link
                 href="#contact"
-                className="px-8 py-4 text-lg rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-105 border border-white/10"
+                className="px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-105 border border-white/10"
               >
                 contact me →
               </Link>
-              <button className="px-8 py-4 text-lg rounded-full bg-gradient-to-r from-neutral-200 to-neutral-100 text-black hover:opacity-90 transition-all hover:scale-105 flex items-center gap-3">
+              <button className="px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-gradient-to-r from-neutral-200 to-neutral-100 text-black hover:opacity-90 transition-all hover:scale-105 flex items-center justify-center gap-3">
                 my resume <Download size={20} />
               </button>
             </motion.div>
@@ -291,7 +354,7 @@ export default function Home() {
         </section>
 
         {/* Skills and Technologies Section */}
-        <section id="services" className="py-20 px-4 relative z-10">
+        <section id="services" className="py-16 md:py-20 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -311,7 +374,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {/* Frontend */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -480,7 +543,7 @@ export default function Home() {
         </section>
 
         {/* My Work Section */}
-        <section id="work" className="py-20 px-4 relative z-10">
+        <section id="work" className="py-16 md:py-20 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -499,7 +562,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* Project 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -736,7 +799,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 px-4 relative z-10">
+        <section id="contact" className="py-16 md:py-20 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -756,7 +819,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
