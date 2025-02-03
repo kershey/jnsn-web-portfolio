@@ -765,11 +765,12 @@ export default function Home() {
                 className="space-y-6"
               >
                 <h3 className="text-2xl font-bold">
-                  Let's talk about everything!
+                  Let&apos;s talk about everything!
                 </h3>
                 <p className="text-gray-400">
-                  Don't like forms? Send me an email directly or connect with me
-                  on social media. I'll get back to you as soon as possible.
+                  Don&apos;t like forms? Send me an email directly or connect
+                  with me on social media. I&apos;ll get back to you as soon as
+                  possible.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
