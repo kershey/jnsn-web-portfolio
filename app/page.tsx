@@ -4,7 +4,26 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { Download } from 'lucide-react';
+import { Download, Code2, Database, GitBranch, Palette } from 'lucide-react';
+import { TypeAnimation } from 'react-type-animation';
+import {
+  FaReact,
+  FaNodeJs,
+  FaGithub,
+  FaDocker,
+  FaServer,
+} from 'react-icons/fa';
+import {
+  TbBrandNextjs,
+  TbBrandTypescript,
+  TbBrandTailwind,
+  TbBrandFramerMotion,
+  TbBrandMongodb,
+  TbBrandVscode,
+  TbBrandVercel,
+} from 'react-icons/tb';
+import { SiExpress, SiFigma, SiAdobexd } from 'react-icons/si';
+import { MdOutlineDesignServices, MdDevices } from 'react-icons/md';
 
 export default function Home() {
   return (
@@ -49,7 +68,7 @@ export default function Home() {
                       className="hover:text-gray-300 transition-colors"
                       href="#services"
                     >
-                      Services
+                      Skills
                     </NavigationMenu.Link>
                   </NavigationMenu.Item>
                   <NavigationMenu.Item>
@@ -58,14 +77,6 @@ export default function Home() {
                       href="#work"
                     >
                       My Work
-                    </NavigationMenu.Link>
-                  </NavigationMenu.Item>
-                  <NavigationMenu.Item>
-                    <NavigationMenu.Link
-                      className="hover:text-gray-300 transition-colors"
-                      href="#contact"
-                    >
-                      Contact me
                     </NavigationMenu.Link>
                   </NavigationMenu.Item>
                 </NavigationMenu.List>
@@ -82,7 +93,10 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <main className="pt-48 px-4 relative min-h-[calc(100vh-80px)]">
+        <main
+          id="home"
+          className="pt-48 px-4 relative min-h-[calc(100vh-80px)]"
+        >
           {/* Hero Background */}
           <div className="absolute inset-0">
             {/* Grid pattern */}
@@ -105,7 +119,21 @@ export default function Home() {
               className="mb-12"
             >
               <div className="flex items-center justify-center gap-2">
-                Jensen Kershey Aragon
+                <TypeAnimation
+                  sequence={[
+                    'Jensen Kershey Aragon',
+                    1000,
+                    'Full Stack Developer',
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                  className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500"
+                />
+                <div className="animate-waving-hand text-5xl md:text-6xl">
+                  👋
+                </div>
               </div>
             </motion.div>
 
@@ -114,15 +142,17 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-6xl font-serif mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400">
-                full-stack web developer
+              <h2 className="text-7xl md:text-8xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400 tracking-tight">
+                full-stack web
                 <br />
-                based in Philippines.
+                developer<span className="text-blue-500">.</span>
               </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-                I am a frontend developer from California, USA with 10 years of
-                experience in multiple companies like Microsoft, Tesla and
-                Apple.
+              <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+                I am a passionate frontend developer and 4th year Information
+                Technology student from Roxas City, Philippines. Currently
+                exploring the world of web development while pursuing my degree,
+                with 6 months of hands-on experience building modern web
+                applications.
               </p>
             </motion.div>
 
@@ -130,16 +160,16 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex gap-4 justify-center"
+              className="flex gap-6 justify-center"
             >
               <Link
                 href="#contact"
-                className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-105 border border-white/10"
+                className="px-8 py-4 text-lg rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-105 border border-white/10"
               >
                 contact me →
               </Link>
-              <button className="px-6 py-3 rounded-full bg-gradient-to-r from-neutral-200 to-neutral-100 text-black hover:opacity-90 transition-all hover:scale-105 flex items-center gap-2">
-                my resume <Download size={16} />
+              <button className="px-8 py-4 text-lg rounded-full bg-gradient-to-r from-neutral-200 to-neutral-100 text-black hover:opacity-90 transition-all hover:scale-105 flex items-center gap-3">
+                my resume <Download size={20} />
               </button>
             </motion.div>
           </div>
@@ -173,17 +203,23 @@ export default function Home() {
                   Full Stack Developer & UI/UX Designer
                 </h3>
                 <p className="text-gray-400">
-                  Hello! I&apos;m Jensen, a passionate Full Stack Developer
-                  based in the Philippines. With a keen eye for design and a
-                  love for clean, efficient code, I create web solutions that
-                  not only look beautiful but also deliver exceptional user
-                  experiences.
+                  Hello! I'm Jensen, a passionate Full Stack Developer and
+                  aspiring technologist based in the Philippines. As a 4th year
+                  IT student, I combine my academic knowledge with practical
+                  development experience to create web solutions that are both
+                  functional and user-friendly.
                 </p>
                 <p className="text-gray-400">
-                  My journey in web development started with a curiosity for how
-                  things work on the internet, and it has evolved into a
-                  professional career where I&apos;ve had the opportunity to
-                  work with various technologies and frameworks.
+                  My journey in web development began during my university
+                  studies, where my curiosity about web technologies led me to
+                  dive deep into modern frameworks and development practices.
+                  I've dedicated countless hours to self-study, exploring the
+                  latest web technologies, frameworks, and industry best
+                  practices through online courses, documentation, and hands-on
+                  projects. This self-driven learning approach, combined with my
+                  academic foundation, has enabled me to stay current with
+                  rapidly evolving web development trends and deliver modern,
+                  efficient solutions.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   <div>
@@ -235,26 +271,26 @@ export default function Home() {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
             >
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-blue-500">5+</h3>
-                <p className="text-gray-400">Years Experience</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-blue-500">50+</h3>
-                <p className="text-gray-400">Projects Completed</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-blue-500">20+</h3>
-                <p className="text-gray-400">Happy Clients</p>
+                <h3 className="text-3xl font-bold text-blue-500">6+</h3>
+                <p className="text-gray-400">Months Experience</p>
               </div>
               <div className="text-center">
                 <h3 className="text-3xl font-bold text-blue-500">10+</h3>
-                <p className="text-gray-400">Awards Won</p>
+                <p className="text-gray-400">Projects Completed</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-blue-500">5+</h3>
+                <p className="text-gray-400">Happy Clients</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-blue-500">3+</h3>
+                <p className="text-gray-400">Academic Awards</p>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Skills and Technologies Section */}
         <section id="services" className="py-20 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -265,199 +301,181 @@ export default function Home() {
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold mb-4">
-                My <span className="text-blue-500">Services</span>
+                Skills & <span className="text-blue-500">Technologies</span>
               </h2>
               <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
               <p className="text-gray-400 max-w-2xl mx-auto">
-                I offer a wide range of web development and design services,
-                crafted to meet your specific needs and help your business grow
-                in the digital space.
+                Here are the technologies and tools I specialize in,
+                continuously learning and applying to create modern web
+                solutions.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Web Development */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {/* Frontend */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+                className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
               >
-                <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                  <svg
-                    className="w-7 h-7 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    />
-                  </svg>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-blue-500/10 rounded-lg">
+                    <Code2 className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-blue-500">Frontend</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Web Development</h3>
-                <p className="text-gray-400">
-                  Custom web applications built with modern technologies like
-                  React, Next.js, and Node.js. Focus on performance,
-                  scalability, and user experience.
-                </p>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <FaReact className="w-4 h-4 text-[#61DAFB]" />
+                    React.js & <TbBrandNextjs className="w-4 h-4 text-white" />{' '}
+                    Next.js
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbBrandTypescript className="w-4 h-4 text-[#3178C6]" />
+                    TypeScript
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbBrandTailwind className="w-4 h-4 text-[#38BDF8]" />
+                    Tailwind CSS
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbBrandFramerMotion className="w-4 h-4 text-[#FF5757]" />
+                    Framer Motion
+                  </li>
+                </ul>
               </motion.div>
 
-              {/* UI/UX Design */}
+              {/* Backend */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+                className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
               >
-                <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                  <svg
-                    className="w-7 h-7 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    />
-                  </svg>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-blue-500/10 rounded-lg">
+                    <Database className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-blue-500">Backend</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-4">UI/UX Design</h3>
-                <p className="text-gray-400">
-                  Beautiful, intuitive interfaces designed with user experience
-                  in mind. From wireframes to high-fidelity prototypes and
-                  design systems.
-                </p>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <FaNodeJs className="w-4 h-4 text-[#339933]" />
+                    Node.js
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <SiExpress className="w-4 h-4 text-white" />
+                    Express.js
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbBrandMongodb className="w-4 h-4 text-[#47A248]" />
+                    MongoDB
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaServer className="w-4 h-4 text-[#FF5757]" />
+                    REST APIs
+                  </li>
+                </ul>
               </motion.div>
 
-              {/* Mobile Development */}
+              {/* Tools & DevOps */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+                className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
               >
-                <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                  <svg
-                    className="w-7 h-7 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                    />
-                  </svg>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-blue-500/10 rounded-lg">
+                    <GitBranch className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-blue-500">
+                    Tools & DevOps
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Mobile Development</h3>
-                <p className="text-gray-400">
-                  Cross-platform mobile applications using React Native and
-                  Flutter. Native-like performance with code reusability.
-                </p>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <FaGithub className="w-4 h-4 text-white" />
+                    Git & GitHub
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />
+                    VS Code
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbBrandVercel className="w-4 h-4 text-white" />
+                    Vercel
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FaDocker className="w-4 h-4 text-[#2496ED]" />
+                    Docker
+                  </li>
+                </ul>
               </motion.div>
 
-              {/* API Development */}
+              {/* Design */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+                className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
               >
-                <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                  <svg
-                    className="w-7 h-7 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-blue-500/10 rounded-lg">
+                    <Palette className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-blue-500">Design</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-4">API Development</h3>
-                <p className="text-gray-400">
-                  Robust and scalable REST APIs built with Node.js and Express.
-                  Secure, documented, and performance-optimized.
-                </p>
-              </motion.div>
-
-              {/* Database Design */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
-              >
-                <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                  <svg
-                    className="w-7 h-7 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-4">Database Design</h3>
-                <p className="text-gray-400">
-                  Efficient database architecture with SQL and NoSQL solutions.
-                  Optimized queries and data structures for your needs.
-                </p>
-              </motion.div>
-
-              {/* Cloud Services */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                viewport={{ once: true }}
-                className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
-              >
-                <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                  <svg
-                    className="w-7 h-7 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-4">Cloud Services</h3>
-                <p className="text-gray-400">
-                  Cloud infrastructure setup and management using AWS, Google
-                  Cloud, or Azure. Scalable and cost-effective solutions.
-                </p>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <SiFigma className="w-4 h-4 text-[#F24E1E]" />
+                    Figma
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <SiAdobexd className="w-4 h-4 text-[#FF61F6]" />
+                    Adobe XD
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MdOutlineDesignServices className="w-4 h-4 text-[#FF5757]" />
+                    UI/UX Design
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MdDevices className="w-4 h-4 text-[#38BDF8]" />
+                    Responsive Design
+                  </li>
+                </ul>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+            >
+              <div className="p-4 bg-white/[0.05] rounded-lg">
+                <h4 className="text-2xl font-bold text-blue-500 mb-2">90%</h4>
+                <p className="text-gray-400">Frontend Development</p>
+              </div>
+              <div className="p-4 bg-white/[0.05] rounded-lg">
+                <h4 className="text-2xl font-bold text-blue-500 mb-2">85%</h4>
+                <p className="text-gray-400">Backend Development</p>
+              </div>
+              <div className="p-4 bg-white/[0.05] rounded-lg">
+                <h4 className="text-2xl font-bold text-blue-500 mb-2">80%</h4>
+                <p className="text-gray-400">UI/UX Design</p>
+              </div>
+              <div className="p-4 bg-white/[0.05] rounded-lg">
+                <h4 className="text-2xl font-bold text-blue-500 mb-2">75%</h4>
+                <p className="text-gray-400">DevOps</p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -488,41 +506,71 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg"
+                className="group bg-white/[0.05] backdrop-blur-sm border border-white/[0.05] rounded-xl overflow-hidden hover:bg-white/[0.1] transition-all duration-300 hover:-translate-y-1"
               >
                 <Link
-                  href="https://tax-app-demo.vercel.app"
+                  href="https://wish-app-eta.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src="/images/tax-app.png"
-                      alt="E-commerce Platform"
-                      width={600}
-                      height={400}
-                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-xl font-bold mb-2">
-                        E-commerce Platform
-                      </h3>
-                      <p className="text-gray-300 text-sm mb-4">
-                        A modern e-commerce platform built with Next.js, Stripe,
-                        and Tailwind CSS.
-                      </p>
-                      <div className="flex gap-2">
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Next.js
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Stripe
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Tailwind
-                        </span>
+                  <div className="relative">
+                    <div className="aspect-video overflow-hidden">
+                      <Image
+                        src="/images/wish-app.png"
+                        alt="Full-Stack Wishlist Web Application"
+                        width={600}
+                        height={400}
+                        className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-black/50 backdrop-blur-md rounded-full p-2 text-white/70 hover:text-white transition-colors">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
                       </div>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col h-full">
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                      Full-Stack Wishlist Web Application
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-6 flex-1">
+                      A modern wishlist application built with Next.js 14 App
+                      Router, featuring a clean and intuitive interface. Built
+                      with Supabase for real-time database functionality and
+                      Tailwind CSS for responsive styling. Features include
+                      real-time updates, wishlist management, and a
+                      mobile-friendly design.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Next.js 14
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        TypeScript
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Supabase
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Tailwind CSS
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Shadcn UI
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -534,41 +582,75 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg"
+                className="group bg-white/[0.05] backdrop-blur-sm border border-white/[0.05] rounded-xl overflow-hidden hover:bg-white/[0.1] transition-all duration-300 hover:-translate-y-1"
               >
                 <Link
                   href="https://expense-tracker-jnsn.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src="/images/expense-tracker.png"
-                      alt="Social Media Dashboard"
-                      width={600}
-                      height={400}
-                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-xl font-bold mb-2">
-                        Social Media Dashboard
-                      </h3>
-                      <p className="text-gray-300 text-sm mb-4">
-                        Real-time social media analytics dashboard with data
-                        visualization.
-                      </p>
-                      <div className="flex gap-2">
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          React
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          D3.js
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Firebase
-                        </span>
+                  <div className="relative">
+                    <div className="aspect-video overflow-hidden">
+                      <Image
+                        src="/images/expense-tracker.png"
+                        alt="Full-Stack Expense Tracking Application"
+                        width={600}
+                        height={400}
+                        className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-black/50 backdrop-blur-md rounded-full p-2 text-white/70 hover:text-white transition-colors">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
                       </div>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col h-full">
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                      Full-Stack Expense Tracking Application
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-6 flex-1">
+                      A comprehensive expense tracking application featuring
+                      user authentication, real-time updates, and interactive
+                      data visualization. Built with Next.js 14, PostgreSQL with
+                      Neon DB for data storage, and Chart.js for data
+                      visualization. Includes features like expense
+                      categorization, budget tracking, and detailed financial
+                      reports.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Next.js 14
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        TypeScript
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        NeonDB
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Prisma
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Chart.js
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Shadcn UI
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -580,201 +662,240 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg"
+                className="group bg-white/[0.05] backdrop-blur-sm border border-white/[0.05] rounded-xl overflow-hidden hover:bg-white/[0.1] transition-all duration-300 hover:-translate-y-1"
               >
                 <Link
-                  href="https://ai-chat-demo.vercel.app"
+                  href="https://realstate-app-mauve.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src="/images/project3.jpg"
-                      alt="AI Chat Application"
-                      width={600}
-                      height={400}
-                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-xl font-bold mb-2">
-                        AI Chat Application
-                      </h3>
-                      <p className="text-gray-300 text-sm mb-4">
-                        Real-time chat application with AI-powered responses and
-                        language translation.
-                      </p>
-                      <div className="flex gap-2">
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          TypeScript
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          OpenAI
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          WebSocket
-                        </span>
+                  <div className="relative">
+                    <div className="aspect-video overflow-hidden">
+                      <Image
+                        src="/images/real-estate.png"
+                        alt="Real Estate Web Application"
+                        width={600}
+                        height={400}
+                        className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-black/50 backdrop-blur-md rounded-full p-2 text-white/70 hover:text-white transition-colors">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
                       </div>
                     </div>
                   </div>
-                </Link>
-              </motion.div>
-
-              {/* Project 4 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg"
-              >
-                <Link
-                  href="https://fitness-app-demo.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src="/images/project4.jpg"
-                      alt="Fitness Tracking App"
-                      width={600}
-                      height={400}
-                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-xl font-bold mb-2">
-                        Fitness Tracking App
-                      </h3>
-                      <p className="text-gray-300 text-sm mb-4">
-                        Mobile-first fitness tracking application with workout
-                        plans and progress tracking.
-                      </p>
-                      <div className="flex gap-2">
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          React Native
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Redux
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Node.js
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-
-              {/* Project 5 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg"
-              >
-                <Link
-                  href="https://edu-platform-demo.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src="/images/project5.jpg"
-                      alt="Educational Platform"
-                      width={600}
-                      height={400}
-                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-xl font-bold mb-2">
-                        Educational Platform
-                      </h3>
-                      <p className="text-gray-300 text-sm mb-4">
-                        Online learning platform with video courses, quizzes,
-                        and progress tracking.
-                      </p>
-                      <div className="flex gap-2">
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Vue.js
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Django
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          PostgreSQL
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-
-              {/* Project 6 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg"
-              >
-                <Link
-                  href="https://task-manager-demo.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src="/images/project6.jpg"
-                      alt="Task Management Tool"
-                      width={600}
-                      height={400}
-                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-xl font-bold mb-2">
-                        Task Management Tool
-                      </h3>
-                      <p className="text-gray-300 text-sm mb-4">
-                        Collaborative task management tool with real-time
-                        updates and team features.
-                      </p>
-                      <div className="flex gap-2">
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Angular
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          Express
-                        </span>
-                        <span className="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
-                          MongoDB
-                        </span>
-                      </div>
+                  <div className="p-6 flex flex-col h-full">
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                      Modern Real Estate Web Platform
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-6 flex-1">
+                      A dynamic real estate platform with smooth animations and
+                      an intuitive property browsing experience. Built with
+                      Next.js 14, Framer Motion for animations, and MongoDB for
+                      property data storage. Features include property search,
+                      filtering, interactive maps, and a responsive image
+                      gallery with modern UI components.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Next.js 14
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        TypeScript
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        MongoDB
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Framer Motion
+                      </span>
+                      <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+                        Tailwind CSS
+                      </span>
                     </div>
                   </div>
                 </Link>
               </motion.div>
             </div>
+          </div>
+        </section>
 
+        {/* Contact Section */}
+        <section id="contact" className="py-20 px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-center mt-12"
+              className="text-center mb-12"
             >
-              <Link
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-105 border border-white/10"
-              >
-                View More Projects →
-              </Link>
+              <h2 className="text-4xl font-bold mb-4">
+                Contact <span className="text-blue-500">Me</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Feel free to reach out to me for collaborations or just a
+                friendly chat. I'm always open to discussing new projects and
+                opportunities.
+              </p>
             </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <h3 className="text-2xl font-bold">
+                  Let's talk about everything!
+                </h3>
+                <p className="text-gray-400">
+                  Don't like forms? Send me an email directly or connect with me
+                  on social media. I'll get back to you as soon as possible.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-white/[0.05] rounded-lg">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 text-blue-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-400">Mail me at</p>
+                      <a
+                        href="mailto:your.email@example.com"
+                        className="text-blue-500 hover:text-blue-400"
+                      >
+                        your.email@example.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-white/[0.05] rounded-lg">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 text-blue-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-400">Location</p>
+                      <p className="text-white">Roxas City, Philippines</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white/[0.05] backdrop-blur-md rounded-xl p-8 border border-white/[0.05]"
+              >
+                <h4 className="text-xl font-bold mb-6">Connect with me</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <a
+                    href="https://github.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 bg-white/[0.05] rounded-lg hover:bg-white/[0.1] transition-colors"
+                  >
+                    <FaGithub className="w-6 h-6" />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 bg-white/[0.05] rounded-lg hover:bg-white/[0.1] transition-colors"
+                  >
+                    <svg
+                      className="w-6 h-6 text-[#0A66C2]"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://twitter.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 bg-white/[0.05] rounded-lg hover:bg-white/[0.1] transition-colors"
+                  >
+                    <svg
+                      className="w-6 h-6 text-[#1DA1F2]"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                    <span>Twitter</span>
+                  </a>
+                  <a
+                    href="https://instagram.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 bg-white/[0.05] rounded-lg hover:bg-white/[0.1] transition-colors"
+                  >
+                    <svg
+                      className="w-6 h-6 text-[#E4405F]"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.38.899-2.126.419-.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                    </svg>
+                    <span>Instagram</span>
+                  </a>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
       </div>
