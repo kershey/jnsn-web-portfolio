@@ -1,7 +1,6 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
+import type { Config } from 'tailwindcss/types';
+import type { PluginAPI, CSSRuleObject } from 'tailwindcss/types/config';
 import svgToDataUri from 'mini-svg-data-uri';
-import colors from 'tailwindcss/colors';
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
 
 const config: Config = {
@@ -25,7 +24,7 @@ const config: Config = {
   },
   plugins: [
     addVariablesForColors,
-    function ({ matchUtilities, theme }) {
+    ({ matchUtilities, theme }: PluginAPI) => {
       matchUtilities(
         {
           'bg-grid': (value: string) => ({
@@ -51,7 +50,7 @@ const config: Config = {
 };
 
 interface AddVariablesForColorsParams {
-  addBase: (base: Record<string, any>) => void;
+  addBase: (base: CSSRuleObject | CSSRuleObject[]) => void;
   theme: (path: string) => Record<string, string>;
 }
 
