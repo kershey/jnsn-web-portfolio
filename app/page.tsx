@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { Download } from 'lucide-react';
-import { TypewriterEffect } from '@/components/ui/typewriter-effect';
-import { WavingHand } from '@/components/ui/waving-hand';
 
 export default function Home() {
   return (
