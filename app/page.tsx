@@ -4,23 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import {
-  Download,
-  Code2,
-  Database,
-  GitBranch,
-  Palette,
-  Menu,
-  X,
-} from 'lucide-react';
+import { Download, Code2, Database, GitBranch, Menu, X } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
-import {
-  FaReact,
-  FaNodeJs,
-  FaGithub,
-  FaDocker,
-  FaServer,
-} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaGithub, FaServer } from 'react-icons/fa';
+import { SiExpress } from 'react-icons/si';
+import { useState } from 'react';
 import {
   TbBrandNextjs,
   TbBrandTypescript,
@@ -30,9 +18,6 @@ import {
   TbBrandVscode,
   TbBrandVercel,
 } from 'react-icons/tb';
-import { SiExpress, SiFigma, SiAdobexd } from 'react-icons/si';
-import { MdOutlineDesignServices, MdDevices } from 'react-icons/md';
-import { useState } from 'react';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
