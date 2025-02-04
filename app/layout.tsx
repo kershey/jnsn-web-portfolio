@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   title: 'Jensen | Full Stack Developer',
   description:
     'Experienced Next.js and Full Stack Developer specializing in building modern, performant web applications. Explore my projects and technical expertise.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
