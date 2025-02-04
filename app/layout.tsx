@@ -22,16 +22,14 @@ export const metadata: Metadata = {
   title: 'Jensen | Full Stack Developer',
   description:
     'Experienced Next.js and Full Stack Developer specializing in building modern, performant web applications. Explore my projects and technical expertise.',
-  icons: [
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-    {
-      rel: 'shortcut icon',
-      url: '/favicon.ico',
-    },
-  ],
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon.png',
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({
