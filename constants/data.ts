@@ -1,7 +1,7 @@
 export const menuItems = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About me' },
-  { href: '#services', label: 'Skills' },
+  { href: '#skills', label: 'Skills' },
   { href: '#work', label: 'My Work' },
 ];
 

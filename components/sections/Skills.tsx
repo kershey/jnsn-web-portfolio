@@ -2,14 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { Code2, Database, GitBranch } from 'lucide-react';
-import { FaReact, FaNodeJs, FaGithub, FaServer } from 'react-icons/fa';
-import { SiExpress } from 'react-icons/si';
+import { FaReact, FaGithub } from 'react-icons/fa';
 import {
   TbBrandNextjs,
   TbBrandTypescript,
   TbBrandTailwind,
   TbBrandFramerMotion,
-  TbBrandMongodb,
   TbBrandVscode,
   TbBrandVercel,
 } from 'react-icons/tb';
@@ -17,7 +15,7 @@ import Image from 'next/image';
 
 export default function Skills() {
   return (
-    <section id="services" className="py-16 md:py-20 px-4 relative z-10">
+    <section id="skills" className="py-16 md:py-20 px-4 relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,37 +34,52 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {/* Frontend */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+            className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-blue-500/10 rounded-lg">
-                <Code2 className="w-5 h-5 text-blue-500" />
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-blue-500/10 rounded-lg">
+                <Code2 className="w-6 h-6 text-blue-500" />
               </div>
-              <h3 className="text-lg font-bold text-blue-500">Frontend</h3>
+              <h3 className="text-xl font-bold text-blue-500">Frontend</h3>
             </div>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-center gap-2">
-                <FaReact className="w-4 h-4 text-[#61DAFB]" />
-                React.js & <TbBrandNextjs className="w-4 h-4 text-white" />{' '}
+            <ul className="space-y-4 text-gray-400">
+              <li className="flex items-center gap-3">
+                <TbBrandNextjs className="w-6 h-6 text-white" />
                 Next.js
               </li>
-              <li className="flex items-center gap-2">
-                <TbBrandTypescript className="w-4 h-4 text-[#3178C6]" />
+              <li className="flex items-center gap-3">
+                <FaReact className="w-6 h-6 text-[#61DAFB]" />
+                React.js
+              </li>
+              <li className="flex items-center gap-3">
+                <TbBrandTypescript className="w-6 h-6 text-[#3178C6]" />
                 TypeScript
               </li>
-              <li className="flex items-center gap-2">
-                <TbBrandTailwind className="w-4 h-4 text-[#38BDF8]" />
+              <li className="flex items-center gap-3">
+                <TbBrandTailwind className="w-6 h-6 text-[#38BDF8]" />
                 Tailwind CSS
               </li>
-              <li className="flex items-center gap-2">
-                <TbBrandFramerMotion className="w-4 h-4 text-[#FF5757]" />
+              <li className="flex items-center gap-3">
+                <div className="p-1 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow">
+                  <Image
+                    src="/shadcn.png"
+                    alt="Shadcn UI"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5"
+                  />
+                </div>
+                Shadcn UI
+              </li>
+              <li className="flex items-center gap-3">
+                <TbBrandFramerMotion className="w-6 h-6 text-[#FF5757]" />
                 Framer Motion
               </li>
             </ul>
@@ -78,70 +91,54 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+            className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-blue-500/10 rounded-lg">
-                <Database className="w-5 h-5 text-blue-500" />
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-blue-500/10 rounded-lg">
+                <Database className="w-6 h-6 text-blue-500" />
               </div>
-              <h3 className="text-lg font-bold text-blue-500">Backend</h3>
+              <h3 className="text-xl font-bold text-blue-500">Backend</h3>
             </div>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-center gap-2">
-                <FaNodeJs className="w-4 h-4 text-[#339933]" />
-                Node.js
-              </li>
-              <li className="flex items-center gap-2">
-                <SiExpress className="w-4 h-4 text-white" />
-                Express.js
-              </li>
-              <li className="flex items-center gap-2">
-                <TbBrandMongodb className="w-4 h-4 text-[#47A248]" />
-                MongoDB
-              </li>
-              <li className="flex items-center gap-2">
-                <FaServer className="w-4 h-4 text-[#FF5757]" />
-                REST APIs
-              </li>
-              <li className="flex items-center gap-2">
+            <ul className="space-y-4 text-gray-400">
+              <li className="flex items-center gap-3">
                 <Image
                   src="/supabase.svg"
                   alt="Supabase"
-                  width={24}
-                  height={24}
-                  className="w-6 h-6"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7"
                 />
                 Supabase
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-3">
                 <Image
                   src="/neondb.png"
                   alt="NeonDB"
-                  width={24}
-                  height={24}
-                  className="w-6 h-6"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7"
                 />
                 NeonDB
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-3">
                 <Image
                   src="/prisma.svg"
                   alt="PrismaORM"
-                  width={24}
-                  height={24}
-                  className="w-6 h-6"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7 bg-white rounded-sm"
                 />
-                PrismaORM
+                Prisma ORM
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-3">
                 <Image
-                  src="/drizzle.svg"
+                  src="/drizzle.png"
                   alt="DrizzleORM"
-                  width={24}
-                  height={24}
-                  className="w-6 h-6"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7"
                 />
-                DrizzleORM
+                Drizzle ORM
               </li>
             </ul>
           </motion.div>
@@ -152,36 +149,37 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+            className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-blue-500/10 rounded-lg">
-                <GitBranch className="w-5 h-5 text-blue-500" />
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-blue-500/10 rounded-lg">
+                <GitBranch className="w-6 h-6 text-blue-500" />
               </div>
-              <h3 className="text-lg font-bold text-blue-500">Tools</h3>
+              <h3 className="text-xl font-bold text-blue-500">Tools</h3>
             </div>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-center gap-2">
-                <FaGithub className="w-4 h-4 text-white" />
-                Git & GitHub
-              </li>
-              <li className="flex items-center gap-2">
-                <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />
-                VS Code
-              </li>
-              <li className="flex items-center gap-2">
-                <TbBrandVercel className="w-4 h-4 text-white" />
-                Vercel
-              </li>
-              <li className="flex items-center gap-2">
+            <ul className="space-y-4 text-gray-400">
+              <li className="flex items-center gap-3">
                 <Image
                   src="/logo.svg"
                   alt="Cursor AI"
-                  width={16}
-                  height={16}
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
                   priority
                 />
                 Cursor AI
+              </li>
+              <li className="flex items-center gap-3">
+                <FaGithub className="w-6 h-6 text-white" />
+                Git & GitHub
+              </li>
+              <li className="flex items-center gap-3">
+                <TbBrandVscode className="w-6 h-6 text-[#007ACC]" />
+                VS Code
+              </li>
+              <li className="flex items-center gap-3">
+                <TbBrandVercel className="w-6 h-6 text-white" />
+                Vercel
               </li>
             </ul>
           </motion.div>

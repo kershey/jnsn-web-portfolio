@@ -26,9 +26,7 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold mb-4">
-              Full Stack Developer & UI/UX Designer
-            </h3>
+            <h3 className="text-2xl font-bold mb-4">Next.js Stack Developer</h3>
             <p className="text-gray-400">
               Hello! I&apos;m Jensen, a passionate Full Stack Developer and
               aspiring technologist based in the Philippines. As a 4th year IT
@@ -48,23 +46,24 @@ export default function About() {
               web development trends and deliver modern, efficient solutions.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div>
+              <div className="col-span-2">
                 <h4 className="font-bold mb-2">Skills</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li>• Next.js & React</li>
-                  <li>• TypeScript & Prisma</li>
-                  <li>• MongoDB & NeonDB</li>
-                  <li>• Tailwind & Framer Motion</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-2">Interests</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li>• Full Stack Development</li>
-                  <li>• Database Architecture</li>
-                  <li>• UI/UX Design</li>
-                  <li>• Web Animation</li>
-                </ul>
+                <div className="grid grid-cols-2 gap-x-4">
+                  <ul className="space-y-2 text-gray-400">
+                    <li>• Next.js</li>
+                    <li>• React</li>
+                    <li>• TypeScript</li>
+                    <li>• Supabase</li>
+                    <li>• NeonDB</li>
+                  </ul>
+                  <ul className="space-y-2 text-gray-400">
+                    <li>• Drizzle ORM</li>
+                    <li>• Prisma ORM</li>
+                    <li>• Tailwind CSS</li>
+                    <li>• Framer Motion</li>
+                    <li>• Shadcn UI</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </motion.div>

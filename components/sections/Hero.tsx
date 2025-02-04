@@ -59,7 +59,7 @@ export default function Hero() {
             developer<span className="text-blue-500">.</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
-            I am a passionate frontend developer and 4th year Information
+            I am a passionate full-stack developer and 4th year Information
             Technology student from Roxas City, Philippines. Currently exploring
             the world of web development while pursuing my degree, with 6 months
             of hands-on experience building modern web applications.
