@@ -103,6 +103,46 @@ export default function Skills() {
                 <FaServer className="w-4 h-4 text-[#FF5757]" />
                 REST APIs
               </li>
+              <li className="flex items-center gap-2">
+                <Image
+                  src="/supabase.svg"
+                  alt="Supabase"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+                Supabase
+              </li>
+              <li className="flex items-center gap-2">
+                <Image
+                  src="/neondb.png"
+                  alt="NeonDB"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+                NeonDB
+              </li>
+              <li className="flex items-center gap-2">
+                <Image
+                  src="/prisma.svg"
+                  alt="PrismaORM"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+                PrismaORM
+              </li>
+              <li className="flex items-center gap-2">
+                <Image
+                  src="/drizzle.svg"
+                  alt="DrizzleORM"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+                DrizzleORM
+              </li>
             </ul>
           </motion.div>
 
@@ -118,9 +158,7 @@ export default function Skills() {
               <div className="p-2 bg-blue-500/10 rounded-lg">
                 <GitBranch className="w-5 h-5 text-blue-500" />
               </div>
-              <h3 className="text-lg font-bold text-blue-500">
-                Tools & DevOps
-              </h3>
+              <h3 className="text-lg font-bold text-blue-500">Tools</h3>
             </div>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center gap-2">

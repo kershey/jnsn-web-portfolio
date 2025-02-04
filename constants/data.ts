@@ -30,7 +30,7 @@ export const projects = [
       'Next.js 14',
       'TypeScript',
       'NeonDB',
-      'Prisma',
+      'Drizzle ORM',
       'Chart.js',
       'Shadcn UI',
     ],

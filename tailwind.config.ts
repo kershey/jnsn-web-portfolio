@@ -1,4 +1,5 @@
-import type { Config } from 'tailwindcss/types';
+import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 import type { PluginAPI, CSSRuleObject } from 'tailwindcss/types/config';
 import svgToDataUri from 'mini-svg-data-uri';
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
@@ -11,17 +12,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+      fontFamily: {
+        sans: ['var(--font-inter)', ...fontFamily.sans],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        'waving-hand': 'wave 2s linear infinite',
+        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
-        'waving-hand': {
+        wave: {
           '0%': { transform: 'rotate(0.0deg)' },
           '10%': { transform: 'rotate(14.0deg)' },
           '20%': { transform: 'rotate(-8.0deg)' },
@@ -31,9 +30,6 @@ const config: Config = {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
-      },
-      animation: {
-        'waving-hand': 'waving-hand 2.5s infinite',
       },
     },
   },
