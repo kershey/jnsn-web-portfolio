@@ -366,7 +366,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* Frontend */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -466,71 +466,18 @@ export default function Home() {
                     Vercel
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaDocker className="w-4 h-4 text-[#2496ED]" />
-                    Docker
-                  </li>
-                </ul>
-              </motion.div>
-
-              {/* Design */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="group bg-white/[0.05] rounded-lg p-6 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-blue-500/10 rounded-lg">
-                    <Palette className="w-5 h-5 text-blue-500" />
-                  </div>
-                  <h3 className="text-lg font-bold text-blue-500">Design</h3>
-                </div>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-center gap-2">
-                    <SiFigma className="w-4 h-4 text-[#F24E1E]" />
-                    Figma
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <SiAdobexd className="w-4 h-4 text-[#FF61F6]" />
-                    Adobe XD
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <MdOutlineDesignServices className="w-4 h-4 text-[#FF5757]" />
-                    UI/UX Design
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <MdDevices className="w-4 h-4 text-[#38BDF8]" />
-                    Responsive Design
+                    <Image
+                      src="/logo.svg"
+                      alt="Cursor AI"
+                      width={16}
+                      height={16}
+                      priority
+                    />
+                    Cursor AI
                   </li>
                 </ul>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-            >
-              <div className="p-4 bg-white/[0.05] rounded-lg">
-                <h4 className="text-2xl font-bold text-blue-500 mb-2">90%</h4>
-                <p className="text-gray-400">Frontend Development</p>
-              </div>
-              <div className="p-4 bg-white/[0.05] rounded-lg">
-                <h4 className="text-2xl font-bold text-blue-500 mb-2">85%</h4>
-                <p className="text-gray-400">Backend Development</p>
-              </div>
-              <div className="p-4 bg-white/[0.05] rounded-lg">
-                <h4 className="text-2xl font-bold text-blue-500 mb-2">80%</h4>
-                <p className="text-gray-400">UI/UX Design</p>
-              </div>
-              <div className="p-4 bg-white/[0.05] rounded-lg">
-                <h4 className="text-2xl font-bold text-blue-500 mb-2">75%</h4>
-                <p className="text-gray-400">DevOps</p>
-              </div>
-            </motion.div>
           </div>
         </section>
 
