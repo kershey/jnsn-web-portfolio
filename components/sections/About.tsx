@@ -32,7 +32,9 @@ export default function About() {
               aspiring technologist based in the Philippines. As a 4th year IT
               student, I combine my academic knowledge with practical
               development experience to create web solutions that are both
-              functional and user-friendly.
+              functional and user-friendly. With a persevering spirit and
+              determination to excel, I&apos;m always eager to embrace new
+              technologies and expand my technical expertise.
             </p>
             <p className="text-gray-400">
               My journey in web development began during my university studies,
@@ -42,8 +44,9 @@ export default function About() {
               technologies, frameworks, and industry best practices through
               online courses, documentation, and hands-on projects. This
               self-driven learning approach, combined with my academic
-              foundation, has enabled me to stay current with rapidly evolving
-              web development trends and deliver modern, efficient solutions.
+              foundation and unwavering determination to learn new tech stacks,
+              has enabled me to stay current with rapidly evolving web
+              development trends and deliver modern, efficient solutions.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="col-span-2">
