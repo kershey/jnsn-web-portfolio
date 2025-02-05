@@ -9,8 +9,8 @@ import {
   TbBrandTailwind,
   TbBrandFramerMotion,
   TbBrandVscode,
-  TbBrandVercel,
 } from 'react-icons/tb';
+import { IoLogoVercel } from 'react-icons/io5';
 import Image from 'next/image';
 
 export default function Skills() {
@@ -178,7 +178,7 @@ export default function Skills() {
                 VS Code
               </li>
               <li className="flex items-center gap-3">
-                <TbBrandVercel className="w-6 h-6 dark:text-white text-black" />
+                <IoLogoVercel className="w-6 h-6 dark:text-white text-black" />
                 Vercel
               </li>
             </ul>
