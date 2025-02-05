@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
-import { Download } from 'lucide-react';
 
 export default function Hero() {
   return (
