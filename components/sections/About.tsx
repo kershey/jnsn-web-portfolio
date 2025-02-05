@@ -29,8 +29,8 @@ export default function About() {
             <h3 className="text-2xl font-bold mb-4">Next.js Stack Developer</h3>
             <p className="text-gray-400">
               Hello! I&apos;m Jensen, a passionate Full Stack Developer and
-              aspiring technologist based in the Philippines. As a 4th year IT
-              student, I combine my academic knowledge with practical
+              aspiring Software Engineer based in the Philippines. As a 4th year
+              IT student, I combine my academic knowledge with practical
               development experience to create web solutions that are both
               functional and user-friendly. With a persevering spirit and
               determination to excel, I&apos;m always eager to embrace new
@@ -56,15 +56,15 @@ export default function About() {
                     <li>• Next.js</li>
                     <li>• React</li>
                     <li>• TypeScript</li>
-                    <li>• Supabase</li>
-                    <li>• NeonDB</li>
+                    <li>• Tailwind CSS</li>
+                    <li>• Framer Motion</li>
+                    <li>• Shadcn UI</li>
                   </ul>
                   <ul className="space-y-2 text-gray-400">
                     <li>• Drizzle ORM</li>
                     <li>• Prisma ORM</li>
-                    <li>• Tailwind CSS</li>
-                    <li>• Framer Motion</li>
-                    <li>• Shadcn UI</li>
+                    <li>• Supabase</li>
+                    <li>• NeonDB</li>
                   </ul>
                 </div>
               </div>
