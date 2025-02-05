@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { Analytics } from '@vercel/analytics/react';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -45,7 +46,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
