@@ -78,9 +78,14 @@ export default function Hero() {
           >
             contact me →
           </Link>
-          <button className="px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-gradient-to-r from-neutral-200 to-neutral-100 text-black hover:opacity-90 transition-all hover:scale-105 flex items-center justify-center gap-3">
-            my resume <Download size={20} />
-          </button>
+          <Link
+            href="https://drive.google.com/file/d/1-bL6TZiv0t0A-izORQ-rFkcUYC55axwg/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-white text-black hover:bg-white/90 transition-all hover:scale-105"
+          >
+            my resume →
+          </Link>
         </motion.div>
       </div>
     </main>
