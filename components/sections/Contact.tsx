@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaFileDownload } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 export default function Contact() {
@@ -134,6 +134,15 @@ export default function Contact() {
               >
                 <MdEmail className="w-6 h-6 text-[#EA4335]" />
                 <span>Gmail</span>
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1-bL6TZiv0t0A-izORQ-rFkcUYC55axwg/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white/[0.05] rounded-lg hover:bg-white/[0.1] transition-colors"
+              >
+                <FaFileDownload className="w-6 h-6 text-green-500" />
+                <span>Resume</span>
               </a>
             </div>
           </motion.div>
