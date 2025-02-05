@@ -17,7 +17,7 @@ export default function Contact() {
             Connect with <span className="text-blue-500">Me</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-800 dark:text-gray-400 max-w-2xl mx-auto">
             Feel free to reach out to me for collaborations or just a friendly
             chat. I&apos;m always open to discussing new projects and
             opportunities.
@@ -35,7 +35,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold">
               Let&apos;s talk about everything!
             </h3>
-            <p className="text-gray-400">
+            <p className="text-gray-800 dark:text-gray-400">
               Don&apos;t like forms? Send me an email directly or connect with
               me on social media. I&apos;ll get back to you as soon as possible.
             </p>
@@ -58,7 +58,9 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400">Mail me at</p>
+                  <p className="text-sm text-gray-800 dark:text-gray-400">
+                    Mail me at
+                  </p>
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=jnsnaragon01@gmail.com&su=Hello&body=How+are+you%3F"
                     target="_blank"
@@ -92,8 +94,12 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400">Location</p>
-                  <p className="text-white">Roxas City, Philippines</p>
+                  <p className="text-sm text-gray-800 dark:text-gray-400">
+                    Location
+                  </p>
+                  <p className="text-blue-500 hover:text-blue-400">
+                    Roxas City, Philippines
+                  </p>
                 </div>
               </div>
             </div>

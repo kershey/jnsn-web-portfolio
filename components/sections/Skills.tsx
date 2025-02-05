@@ -28,7 +28,7 @@ export default function Skills() {
             Skills & <span className="text-blue-500">Technologies</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Here are the technologies and tools I specialize in, continuously
             learning and applying to create modern web solutions.
           </p>
@@ -41,7 +41,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+            className="group bg-white/[0.05] dark:bg-white/[0.05] bg-gray-100/50 rounded-lg p-8 hover:bg-gray-200/50 dark:hover:bg-white/[0.1] transition-colors border border-gray-200 dark:border-white/[0.05]"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-blue-500/10 rounded-lg">
@@ -49,9 +49,9 @@ export default function Skills() {
               </div>
               <h3 className="text-xl font-bold text-blue-500">Frontend</h3>
             </div>
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-4 text-muted-foreground">
               <li className="flex items-center gap-3">
-                <TbBrandNextjs className="w-6 h-6 text-white" />
+                <TbBrandNextjs className="w-6 h-6 dark:text-white text-black" />
                 Next.js
               </li>
               <li className="flex items-center gap-3">
@@ -91,7 +91,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+            className="group bg-white/[0.05] dark:bg-white/[0.05] bg-gray-100/50 rounded-lg p-8 hover:bg-gray-200/50 dark:hover:bg-white/[0.1] transition-colors border border-gray-200 dark:border-white/[0.05]"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-blue-500/10 rounded-lg">
@@ -99,7 +99,7 @@ export default function Skills() {
               </div>
               <h3 className="text-xl font-bold text-blue-500">Backend</h3>
             </div>
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-4 text-muted-foreground">
               <li className="flex items-center gap-3">
                 <Image
                   src="/supabase.svg"
@@ -149,7 +149,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="group bg-white/[0.05] rounded-lg p-8 hover:bg-white/[0.1] transition-colors border border-white/[0.05]"
+            className="group bg-white/[0.05] dark:bg-white/[0.05] bg-gray-100/50 rounded-lg p-8 hover:bg-gray-200/50 dark:hover:bg-white/[0.1] transition-colors border border-gray-200 dark:border-white/[0.05]"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-blue-500/10 rounded-lg">
@@ -157,7 +157,7 @@ export default function Skills() {
               </div>
               <h3 className="text-xl font-bold text-blue-500">Tools</h3>
             </div>
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-4 text-muted-foreground">
               <li className="flex items-center gap-3">
                 <Image
                   src="/logo.svg"
@@ -170,7 +170,7 @@ export default function Skills() {
                 Cursor AI
               </li>
               <li className="flex items-center gap-3">
-                <FaGithub className="w-6 h-6 text-white" />
+                <FaGithub className="w-6 h-6 dark:text-white text-black" />
                 Git & GitHub
               </li>
               <li className="flex items-center gap-3">
@@ -178,7 +178,7 @@ export default function Skills() {
                 VS Code
               </li>
               <li className="flex items-center gap-3">
-                <TbBrandVercel className="w-6 h-6 text-white" />
+                <TbBrandVercel className="w-6 h-6 dark:text-white text-black" />
                 Vercel
               </li>
             </ul>

@@ -27,7 +27,7 @@ export default function About() {
             className="space-y-4"
           >
             <h3 className="text-2xl font-bold mb-4">Next.js Stack Developer</h3>
-            <p className="text-gray-400">
+            <p className="text-gray-800 dark:text-gray-400">
               Hello! I&apos;m Jensen, a passionate Full Stack Developer and
               aspiring Software Engineer based in the Philippines. As a 4th year
               IT student, I combine my academic knowledge with practical
@@ -36,7 +36,7 @@ export default function About() {
               determination to excel, I&apos;m always eager to embrace new
               technologies and expand my technical expertise.
             </p>
-            <p className="text-gray-400">
+            <p className="text-gray-800 dark:text-gray-400">
               My journey in web development began during my university studies,
               where my curiosity about web technologies led me to dive deep into
               modern frameworks and development practices. I&apos;ve dedicated
@@ -52,7 +52,7 @@ export default function About() {
               <div className="col-span-2">
                 <h4 className="font-bold mb-2">Skills</h4>
                 <div className="grid grid-cols-2 gap-x-4">
-                  <ul className="space-y-2 text-gray-400">
+                  <ul className="space-y-2 text-gray-800 dark:text-gray-400">
                     <li>• Next.js</li>
                     <li>• React</li>
                     <li>• TypeScript</li>
@@ -60,7 +60,7 @@ export default function About() {
                     <li>• Framer Motion</li>
                     <li>• Shadcn UI</li>
                   </ul>
-                  <ul className="space-y-2 text-gray-400">
+                  <ul className="space-y-2 text-gray-800 dark:text-gray-400">
                     <li>• Drizzle ORM</li>
                     <li>• Prisma ORM</li>
                     <li>• Supabase</li>
@@ -100,11 +100,15 @@ export default function About() {
         >
           <div className="text-center">
             <h3 className="text-3xl font-bold text-blue-500">6+</h3>
-            <p className="text-gray-400">Months Experience</p>
+            <p className="text-gray-800 dark:text-gray-400">
+              Months Experience
+            </p>
           </div>
           <div className="text-center">
             <h3 className="text-3xl font-bold text-blue-500">3+</h3>
-            <p className="text-gray-400">Projects Completed</p>
+            <p className="text-gray-800 dark:text-gray-400">
+              Projects Completed
+            </p>
           </div>
         </motion.div>
       </div>

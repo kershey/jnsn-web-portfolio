@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { Menu, X } from 'lucide-react';
 import { menuItems } from '@/constants/data';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,8 +25,11 @@ export default function Navigation() {
     <>
       <nav className="fixed w-full top-0 z-50 px-4 py-4">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white/[0.05] backdrop-blur-md rounded-full px-4 md:px-8 py-4 flex justify-between items-center border border-white/[0.05]">
-            <Link href="/" className="text-2xl font-bold">
+          <div className="bg-white/80 dark:bg-black/50 backdrop-blur-xl rounded-full px-4 md:px-8 py-4 flex justify-between items-center border border-gray-200 dark:border-white/10 shadow-lg shadow-gray-200/20 dark:shadow-none">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-gray-900 dark:text-white"
+            >
               Jensen<span className="text-red-500">.</span>
             </Link>
 
@@ -36,7 +40,7 @@ export default function Navigation() {
                   {menuItems.map((item) => (
                     <NavigationMenu.Item key={item.href}>
                       <NavigationMenu.Link
-                        className="hover:text-gray-300 transition-colors"
+                        className="text-gray-700 dark:text-white/90 hover:text-gray-900 dark:hover:text-white font-medium transition-colors"
                         href={item.href}
                       >
                         {item.label}
@@ -48,16 +52,17 @@ export default function Navigation() {
             </div>
 
             <div className="flex items-center gap-4">
+              <ThemeToggle />
               <Link
                 href="#contact"
-                className="hidden md:block px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                className="hidden md:block px-6 py-2.5 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-all shadow-sm"
               >
                 Contact →
               </Link>
 
               <button
                 onClick={toggleMenu}
-                className="md:hidden p-2 hover:bg-white/10 rounded-full transition-colors"
+                className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors text-gray-700 dark:text-white"
                 aria-label="Toggle Menu"
               >
                 {isOpen ? (
@@ -81,14 +86,14 @@ export default function Navigation() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            <div className="absolute inset-0 bg-black/95 backdrop-blur-md" />
+            <div className="absolute inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-xl" />
             <nav className="relative h-full flex flex-col items-center justify-center space-y-8 text-2xl">
               {menuItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={closeMenu}
-                  className="hover:text-blue-500 transition-colors"
+                  className="text-gray-700 dark:text-white/90 hover:text-gray-900 dark:hover:text-white font-medium transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -96,7 +101,7 @@ export default function Navigation() {
               <Link
                 href="#contact"
                 onClick={closeMenu}
-                className="px-8 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-base"
+                className="px-8 py-3 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-all shadow-sm text-base"
               >
                 Contact →
               </Link>

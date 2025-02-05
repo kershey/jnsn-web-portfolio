@@ -17,7 +17,7 @@ export default function Projects() {
             My <span className="text-blue-500">Work</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-800 dark:text-gray-400 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and
             experience in web development and design.
           </p>
