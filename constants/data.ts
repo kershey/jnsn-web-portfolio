@@ -38,7 +38,7 @@ export const projects = [
   {
     title: 'Modern Real Estate Web Platform',
     description:
-      'A modern real estate platform showcasing responsive design and smooth animations. Built with Next.js 14 and Framer Motion for seamless user interactions. Features include property listings with filtering capabilities, an intuitive user interface, and a responsive image gallery. Demonstrates front-end development skills with a focus on modern UI/UX principles.',
+      'A modern real estate platform showcasing responsive design and smooth animations. Built with Next.js 14 and Framer Motion for seamless user interactions. Features include property listings with filtering capabilities, an intuitive user interface, and a responsive image gallery. Demonstrates front-end development skills with a focus on modern design.',
     image: '/images/real-estate.png',
     link: 'https://realstate-app-mauve.vercel.app/',
     technologies: [
