@@ -38,15 +38,15 @@ export const projects = [
   {
     title: 'Modern Real Estate Web Platform',
     description:
-      'A dynamic real estate platform with smooth animations and an intuitive property browsing experience. Built with Next.js 14, Framer Motion for animations, and MongoDB for property data storage. Features include property search, filtering, interactive maps, and a responsive image gallery with modern UI components.',
+      'A modern real estate platform showcasing responsive design and smooth animations. Built with Next.js 14 and Framer Motion for seamless user interactions. Features include property listings with filtering capabilities, an intuitive user interface, and a responsive image gallery. Demonstrates front-end development skills with a focus on modern UI/UX principles.',
     image: '/images/real-estate.png',
     link: 'https://realstate-app-mauve.vercel.app/',
     technologies: [
       'Next.js 14',
       'TypeScript',
-      'MongoDB',
       'Framer Motion',
       'Tailwind CSS',
+      'Shadcn UI',
     ],
   },
 ];
